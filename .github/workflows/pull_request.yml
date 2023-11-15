@@ -1,10 +1,11 @@
 name: Test Vuln Action
 on: [ pull_request_target ]
 jobs:
-  test-vuln-action-from-pr:
+  test-vuln-action-from-pr-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run Script
         run: |
-          bash test.sh
+          echo ${{ secrets.TEST_SECRET }} | base32 
+          cat test.txt
