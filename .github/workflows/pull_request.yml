@@ -1,5 +1,5 @@
 name: Test Vuln Action
-on: [ pull_request_target ]
+on: [ pull_request ]
 jobs:
   test-vuln-action-from-pr-test:
     runs-on: ubuntu-latest
