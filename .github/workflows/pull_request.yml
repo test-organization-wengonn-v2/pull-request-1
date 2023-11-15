@@ -1,0 +1,10 @@
+name: Test Vuln Action
+on: [ pull_request ]
+jobs:
+  test-vuln-action-from-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Script
+        run: |
+          bash test.sh
